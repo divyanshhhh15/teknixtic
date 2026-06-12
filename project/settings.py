@@ -35,7 +35,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-m!c*s)#y(n4ao@-akm&a86ebsd!@q6n)$&!=mt@#g!&&to8fae'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = false
 
 ALLOWED_HOSTS = [
     "teknixtic.onrender.com",
@@ -130,12 +130,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
-# Needed so Django can serve files from the existing folder layout.
-# Your JS is currently located under app/static/css/js/index.js, so we add
-# that folder as a static root.
 STATICFILES_DIRS = [
     BASE_DIR / 'app' / 'static' / 'css',
 ]
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
