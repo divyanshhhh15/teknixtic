@@ -1,0 +1,29 @@
+<div class="container py-5">
+  <div class="card border-0 shadow rounded-4 bg-dark text-light">
+    <div class="card-body p-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="h3 mb-1">Previous chats</h2>
+          <p class="text-white-50 mb-0">Browse all saved conversations.</p>
+        </div>
+        <a class="btn btn-outline-light" href="/">Back to home</a>
+      </div>
+
+      <div class="list-group list-group-flush">
+        {% for session in sessions %}
+          <a class="list-group-item list-group-item-action bg-transparent text-light border-secondary rounded-3 mb-2" href="/history/{{ session.id }}/">
+            <div class="d-flex justify-content-between align-items-start gap-3">
+              <div>
+                <div class="fw-semibold">{{ session.title }}</div>
+                <small class="text-white-50">{{ session.created_at|date:"M d, Y H:i" }}</small>
+              </div>
+              <span class="badge bg-primary-subtle text-primary-emphasis">View</span>
+            </div>
+          </a>
+        {% empty %}
+          <p class="text-white-50 mb-0">No saved history yet.</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

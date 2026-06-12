@@ -1,0 +1,170 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - Teknixtic</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS ANIMATION -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark premium-navbar sticky-top">
+    <div class="container-fluid px-lg-5">
+
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold fs-3 logo-text" href="#">
+            ⚡ TEKNIXTIC
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active-nav" href="{% url 'about' %}">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">
+                        Contact
+                    </a>
+                </li>
+
+              </ul>
+
+            <!-- CTA -->
+            <div class="d-flex gap-2">
+
+                <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Login
+                </button>
+
+                <button class="btn btn-signup" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    Sign Up
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</nav>   
+    <main class="container py-5"> <section class="text-center mb-5"> <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill px-3 py-2 mb-3">About Teknixtic</span> <h1 class="display-5 fw-bold text-light mb-3">A smarter way to learn with AI</h1> <p class="lead text-white-50 mx-auto" style="max-width: 700px;">Discover how Teknixtic turns complex topics into clear notes, faster summaries, and better study experiences for every learner.</p> </section> <section class="d-grid gap-5"> <article class="row g-4 align-items-center bg-dark rounded-4 shadow-lg border border-light border-opacity-10 p-3 p-md-4"> <div class="col-lg-6"> <img class="img-fluid rounded-4 w-100" src="https://i.pinimg.com/1200x/08/21/07/082107da9bc0a06d093d3467e336e197.jpg" alt="AI notes generation" /> </div> <div class="col-lg-6 text-light"> <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill px-3 py-2 mb-3">Feature 1</span> <h2 class="h3 fw-bold mb-3">Smart AI Notes Generation</h2> <p class="text-white-50 mb-3">Teknixtic turns long and complicated lessons into neat, readable notes that are easy to revisit before tests, presentations, and class discussions. It saves time for students who want to understand concepts faster without losing important details. The AI format is simple, structured, and built to support better memory retention. Every note feels clean, focused, and prepared for real learning instead of cluttered copying. This makes studying feel less exhausting and more productive from the very first page.</p> <p class="text-white-50 mb-0">Whether you are preparing for exams or reviewing class topics, these notes help you stay consistent and organized. The result is a smoother study routine, quicker revision, and more confidence in every session.</p> </div> </article> <article class="row g-4 align-items-center bg-dark rounded-4 shadow-lg border border-light border-opacity-10 p-3 p-md-4"> <div class="col-lg-6 order-lg-2"> <img class="img-fluid rounded-4 w-100" src="https://i.pinimg.com/736x/a5/55/b5/a555b5e1a08359a46503de5ce1ef555c.jpg" alt="Topic summaries" /> </div> <div class="col-lg-6 order-lg-1 text-light"> <span class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25 rounded-pill px-3 py-2 mb-3">Feature 2</span> <h2 class="h3 fw-bold mb-3">Instant Topic Summaries</h2> <p class="text-white-50 mb-3">Summaries make learning feel lighter because they cut through noise and keep only the most useful points. Teknixtic helps you capture the essence of a topic without spending hours reading long material. This is especially helpful when you need a fast revision sheet before quizzes, exams, or group discussions. The output is short, meaningful, and easy to scan in just a few seconds. It gives students a practical way to review without feeling overwhelmed.</p> <p class="text-white-50 mb-0">Instead of re-reading everything, you get a focused version that highlights main ideas, core principles, and important takeaways. That means faster learning and more confident revision every time.</p> </div> </article> <article class="row g-4 align-items-center bg-dark rounded-4 shadow-lg border border-light border-opacity-10 p-3 p-md-4"> <div class="col-lg-6"> <img class="img-fluid rounded-4 w-100" src="https://i.pinimg.com/736x/76/d5/02/76d5026fb593c1a427cca8f6c8f68580.jpg" alt="Personalized learning" /> </div> <div class="col-lg-6 text-light"> <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-3 py-2 mb-3">Feature 3</span> <h2 class="h3 fw-bold mb-3">Personalized Learning Experience</h2> <p class="text-white-50 mb-3">Every learner has a different pace, style, and level of comfort, and Teknixtic respects that by delivering content in a more approachable format. It helps turn difficult subjects into manageable steps that feel natural to follow. Students can understand ideas gradually instead of trying to absorb everything at once. This makes studying more comfortable, especially for beginners who want clear guidance. The experience feels supportive, encouraging, and built around real learning needs.</p> <p class="text-white-50 mb-0">With a more personalized flow, students stay engaged, reduce frustration, and build stronger confidence in their own progress over time.</p> </div> </article> <article class="row g-4 align-items-center bg-dark rounded-4 shadow-lg border border-light border-opacity-10 p-3 p-md-4"> <div class="col-lg-6 order-lg-2"> <img class="img-fluid rounded-4 w-100" src="https://i.pinimg.com/736x/d7/81/62/d78162abfac9124cb8b5c5fe04e3527f.jpg" alt="Exam preparation" /> </div> <div class="col-lg-6 order-lg-1 text-light"> <span class="badge bg-warning bg-opacity-10 text-warning border border-warning border-opacity-25 rounded-pill px-3 py-2 mb-3">Feature 4</span> <h2 class="h3 fw-bold mb-3">Smarter Exam Preparation</h2> <p class="text-white-50 mb-3">Exam preparation becomes easier when the important material is already simplified and ready to use. Teknixtic helps students focus on the most relevant concepts instead of going through long, unclear resources. This allows for faster revisions, better memory recall, and less stress during the final days before exams. It also creates a more balanced study session because the content feels easy to manage. Students can cover more material in less time without losing quality.</p> <p class="text-white-50 mb-0">The platform supports a calm and structured approach to revision, which makes exam time feel more controlled and less intimidating.</p> </div> </article> <article class="row g-4 align-items-center bg-dark rounded-4 shadow-lg border border-light border-opacity-10 p-3 p-md-4"> <div class="col-lg-6"> <img class="img-fluid rounded-4 w-100" src="https://i.pinimg.com/736x/d4/27/8f/d4278fcfa4da91f5e133ddc37c93e389.jpg" alt="Organized resources" /> </div> <div class="col-lg-6 text-light"> <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary border-opacity-25 rounded-pill px-3 py-2 mb-3">Feature 5</span> <h2 class="h3 fw-bold mb-3">Organized Study Resources</h2> <p class="text-white-50 mb-3">Having everything in one place improves focus and reduces the frustration of searching through scattered notes. Teknixtic gives learners a space where study material feels clean, accessible, and easy to revisit. This structure helps students stay on track and build consistent habits over time. It also makes revision faster because the information is already categorized in a useful way. Organized content encourages discipline and supports steady progress.</p> <p class="text-white-50 mb-0">When your resources are clear and easy to find, learning becomes more enjoyable and far less confusing at every stage.</p> </div> </article> <article class="row g-4 align-items-center bg-dark rounded-4 shadow-lg border border-light border-opacity-10 p-3 p-md-4"> <div class="col-lg-6 order-lg-2"> <img class="img-fluid rounded-4 w-100" src="https://i.pinimg.com/736x/09/15/58/091558005f6d05ed66be9407b50a8f96.jpg" alt="Productivity" /> </div> <div class="col-lg-6 order-lg-1 text-light"> <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill px-3 py-2 mb-3">Feature 6</span> <h2 class="h3 fw-bold mb-3">AI-Powered Productivity</h2> <p class="text-white-50 mb-3">Teknixtic helps reduce repetitive work so students can spend their energy on real understanding instead of formatting and rewriting. AI-powered support makes note creation easier, faster, and more consistent across all topics. This frees up time for practice, discussion, and deeper thinking. It also helps learners stay motivated because the process feels lighter and more efficient. Productivity grows naturally when the tools support your workflow instead of slowing it down.</p> <p class="text-white-50 mb-0">The result is a smarter study routine that saves time while improving the quality of what you create and review.</p> </div> </article> <article class="row g-4 align-items-center bg-dark rounded-4 shadow-lg border border-light border-opacity-10 p-3 p-md-4"> <div class="col-lg-6"> <img class="img-fluid rounded-4 w-100" src="https://i.pinimg.com/1200x/4f/5d/47/4f5d474b84a2fb29bbb65249910b9324.jpg" alt="Learn anywhere" /> </div> <div class="col-lg-6 text-light"> <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 rounded-pill px-3 py-2 mb-3">Feature 7</span> <h2 class="h3 fw-bold mb-3">Learn Anywhere, Anytime</h2> <p class="text-white-50 mb-3">Learning should not stop when you move from home to class or from one device to another. Teknixtic is designed to support students in flexible environments where access and convenience matter. Whether you are revising on the train, preparing at night, or studying in a classroom, the material remains simple to use. This mobility helps learners stay consistent and connected to their goals. The experience becomes more practical because it works with your schedule instead of against it.</p> <p class="text-white-50 mb-0">You can continue learning without barriers, which builds confidence and keeps progress steady no matter where you are.</p> </div> </article> <article class="row g-4 align-items-center bg-dark rounded-4 shadow-lg border border-light border-opacity-10 p-3 p-md-4"> <div class="col-lg-6 order-lg-2"> <img class="img-fluid rounded-4 w-100" src="https://i.pinimg.com/736x/5d/5c/b1/5d5cb17980080d6aa089940c15393360.jpg" alt="Future of learning" /> </div> <div class="col-lg-6 order-lg-1 text-light"> <span class="badge bg-light bg-opacity-10 text-light border border-light border-opacity-25 rounded-pill px-3 py-2 mb-3">Feature 8</span> <h2 class="h3 fw-bold mb-3">The Future of Student Learning</h2> <p class="text-white-50 mb-3">Teknixtic represents the next step in education, where technology supports deep learning instead of replacing it. It combines smart tools, easy access, and helpful structure to make the learning journey more meaningful. Students get the support they need to stay focused, creative, and confident in their studies. The future of education looks brighter when tools are simple, useful, and designed for real learners. This approach makes progress feel possible for everyone.</p> <p class="text-white-50 mb-0">With Teknixtic, learning becomes faster, smarter, and more inspiring, opening the door to better results and stronger habits.</p> </div> </article> </section> </main>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 900,
+    once: true,
+    easing: "ease-out-cubic"
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  AOS.init({
+    duration: 600,   // reduced from 800 (less lag)
+    once: true,
+    easing: "ease-out"
+  });
+</script>
+<footer class="saas-footer mt-5">
+
+  <div class="container py-5">
+
+    <div class="row g-4 align-items-start">
+
+      <!-- BRAND -->
+      <div class="col-lg-4">
+        <h4 class="footer-logo">⚡ TEKNIXTIC</h4>
+        <p class="footer-text">
+          AI-powered learning platform built for smarter, faster and simpler education.
+        </p>
+
+        <!-- SOCIAL LINKS -->
+        <div class="socials mt-3">
+
+          <a href="https://www.linkedin.com/in/YOUR-PROFILE"
+             target="_blank"
+             class="social-btn">
+            <span>in</span> LinkedIn
+          </a>
+
+        </div>
+      </div>
+
+      <!-- PRODUCT LINKS -->
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-title">Product</h6>
+        <ul class="footer-links">
+
+          <li><a href="{% url 'home' %}#features">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Updates</a></li>
+
+        </ul>
+      </div>
+
+      <!-- COMPANY LINKS -->
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-title">Company</h6>
+        <ul class="footer-links">
+
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+
+        </ul>
+      </div>
+
+      <!-- LEGAL -->
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-title">Legal</h6>
+        <ul class="footer-links">
+
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom mt-4 pt-3 d-flex justify-content-between flex-wrap">
+
+      <p class="mb-0 text-secondary">
+        © 2026 Teknixtic, Inc. All rights reserved.
+      </p>
+
+      <a href="https://www.linkedin.com/in/divyansh-pradhan-990382327/" target="_blank" rel="noopener">
+  My LinkedIn
+</a>
+
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

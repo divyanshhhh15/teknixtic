@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>teknixtic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+ <body class="bg-dark text-light">{% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+  
+   <nav class="navbar navbar-expand-lg navbar-dark premium-navbar sticky-top">
+    <div class="container-fluid px-lg-5">
+
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold fs-3 logo-text" href="#">
+            ⚡ TEKNIXTIC
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+
+                <li class="nav-item">
+                    <a class="nav-link active-nav" href="{% url 'home' %}">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">
+                        Contact
+                    </a>
+                </li>
+
+              </ul>
+
+            <!-- CTA -->
+            <div class="d-flex gap-2">
+
+                <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Login
+                </button>
+
+                <button class="btn btn-signup" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    Sign Up
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</nav>   
+
+
+<!-- Login Modal -->
+   <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content tek-modal">
+
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body p-4">
+
+                <div class="text-center mb-4">
+
+                    <span class="tek-badge">
+                        ✨ Welcome Back
+                    </span>
+
+                    <h2 class="fw-bold mt-3">
+                        Login to Teknixtic
+                    </h2>
+
+                    <p class="text-secondary">
+                      have a seat on your comfy companion ai once again
+                    </p>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Email Address
+                    </label>
+
+                    <input type="email" class="form-control tek-input" placeholder="name@example.com">
+
+                </div>
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Password
+                    </label>
+
+                    <input type="password" class="form-control tek-input" placeholder="Enter password">
+
+                </div>
+
+                <button class="btn btn-primary w-100 py-2">
+                    Login
+                </button>
+
+                <div class="text-center mt-4">
+                    <small class="text-secondary">
+                        Don't have an account?
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
+                            Sign Up
+                        </a>
+                    </small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Sign Up Modal -->
+
+<div class="modal fade" id="signupModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content tek-modal">
+
+            <div class="modal-header border-0 pb-0">
+
+                <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body p-4">
+
+                <div class="text-center mb-4">
+
+                    <span class="tek-badge">
+                        🚀 Get Started
+                    </span>
+
+                    <h2 class="fw-bold mt-3">
+                        Create Account
+                    </h2>
+
+                    <p class="text-secondary">
+                      Join Teknixtic and transform the way you study.     </p>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Email Address
+                    </label>
+
+                    <input type="email" class="form-control tek-input" placeholder="name@example.com">
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Password
+                    </label>
+
+                    <input type="password" class="form-control tek-input" placeholder="Create password">
+
+                </div>
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Confirm Password
+                    </label>
+
+                    <input type="password" class="form-control tek-input" placeholder="Confirm password">
+
+                </div>
+
+                <button class="btn btn-primary w-100 py-2">
+                    Create Account
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+  <div class="container-fluid p-0">
+    <section class="hero-section py-5 overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center min-vh-75">
+
+                <!-- Left Content -->
+               <div class="col-lg-6 hero-content">
+
+    <div class="hero-chip mb-4">
+        <span class="pulse-dot"></span>
+        AI-Powered Study Platform
+    </div>
+
+    <h1 class="hero-title mb-4">
+        The Future of
+        <span class="gradient-text">AI Learning</span>
+        Starts Here
+    </h1>
+
+    <p class="hero-subtitle mb-4">
+        Generate intelligent notes, AI summaries, quizzes, flashcards and personalized study assistance from any topic in seconds.
+    </p>
+
+    <div class="d-flex gap-3 flex-wrap mb-4">
+
+        <button type="button" class="btn hero-btn-primary" id="btn-generate-notes">Generate Notes</button>
+        
+        <button type="button" class="btn hero-btn-secondary" id="btn-try-ai-chat">Try AI Chat</button>
+
+    </div>
+
+    <div class="hero-tags">
+
+        <span>AI Notes</span>
+        <span>MCQs</span>
+        <span>Flashcards</span>
+        <span>Summaries</span>
+
+    </div>
+
+</div>
+
+              <div class="dashboard-preview">
+
+    <div class="preview-topbar">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="p-4">
+
+        <div class="row g-3 mb-3">
+
+            <div class="col-6">
+                <div class="mini-card">
+                    <small>Notes Generated</small>
+                    <h4>2,847</h4>
+                    <span class="growth">+18%</span>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="mini-card">
+                    <small>MCQs Created</small>
+                    <h4>12,504</h4>
+                    <span class="growth">+26%</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="chat-card mb-3">
+
+            <div class="ai-header">
+                <span class="ai-dot"></span>
+                Teknixtic AI Assistant
+            </div>
+
+            <div class="user-msg mt-3">
+                Explain Photosynthesis
+            </div>
+
+            <div class="ai-msg mt-2">
+                Photosynthesis converts sunlight into chemical energy and produces oxygen as a by-product.
+            </div>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <div class="d-flex justify-content-between mb-2">
+                <small>Learning Progress</small>
+                <small>87%</small>
+            </div>
+
+            <div class="progress custom-progress">
+                <div class="progress-bar" style="width:87%"></div>
+            </div>
+
+            <div class="chart-bars mt-4">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+  <section class="benefits-section py-5">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h5>Instant Learning</h5>
+                    <p>Get study-ready content in seconds.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h5>Concept Clarity</h5>
+                    <p>Understand difficult topics faster.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h5>Study Efficiency</h5>
+                    <p>Spend less time searching and more learning.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h5>Exam Ready</h5>
+                    <p>Practice smarter with structured learning.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+            
+
+   <div class="text-center mb-5">
+
+    <span class="badge hero-badge mb-3">
+        Powerful Features
+    </span>
+
+    <h2 class="display-5 fw-bold">
+        Everything You Need To
+        <span class="hero-gradient">Study Smarter</span>
+    </h2>
+
+    <p class="text-secondary fs-5 mx-auto" style="max-width:700px;">
+        Transform any topic into notes, summaries, quizzes and AI-powered explanations with a single workflow.
+    </p>
+
+</div>
+<div class="row g-4">
+
+    <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h5>AI Notes Generator</h5>
+            <p>Create structured study notes from any topic in seconds.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h5>Smart Summaries</h5>
+            <p>Convert lengthy content into concise key takeaways.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+            <div class="feature-icon">❓</div>
+            <h5>MCQ Generator</h5>
+            <p>Generate exam-style practice questions automatically.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <h5>AI Study Chat</h5>
+            <p>Ask questions and get instant explanations anytime.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h5>Organized Learning</h5>
+            <p>Keep notes, summaries and quizzes structured in one place.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h5>Exam Preparation</h5>
+            <p>Revise smarter and improve retention with AI assistance.</p>
+        </div>
+    </div>
+
+</div>
+
+  <!-- WHY SECTION -->
+<section class="why-section py-5">
+
+    <div class="row align-items-center g-5">
+
+        <!-- Left Content -->
+        <div class="col-lg-6">
+
+            <span class="badge hero-badge mb-3">
+                Why Teknixtic
+            </span>
+
+            <h2 class="display-5 fw-bold mb-4">
+                Built For
+                <span class="hero-gradient">
+                    Smarter Learning
+                </span>
+            </h2>
+
+            <p class="text-secondary fs-5 mb-4">
+                Teknixtic combines note generation, summaries, quizzes and AI assistance into a single workflow so you can spend less time organizing and more time learning.
+            </p>
+
+            <div class="why-list">
+
+                <div class="why-item">
+                    <span>⚡</span>
+                    Faster study workflow
+                </div>
+
+                <div class="why-item">
+                    <span>🧠</span>
+                    Better understanding of concepts
+                </div>
+
+                <div class="why-item">
+                    <span>🎯</span>
+                    Improved retention &amp; revision
+                </div>
+
+                <div class="why-item">
+                    <span>📚</span>
+                    Everything organized in one place
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+       <div class="col-lg-6">
+
+    <div class="why-preview-card">
+
+        <div class="preview-header d-flex justify-content-between align-items-center">
+
+            <span>AI Learning Workflow</span>
+
+            <span class="status-badge">
+                Active
+            </span>
+
+        </div>
+        
+
+        <div class="workflow-container">
+
+            <div class="workflow-step active-step">
+                <span class="step-number">1</span>
+
+                <div>
+                    <h6>Enter Topic</h6>
+                    <small>Organic Chemistry</small>
+                </div>
+            </div>
+
+            <div class="workflow-arrow">↓</div>
+
+            <div class="workflow-step">
+                <span class="step-number">2</span>
+
+                <div>
+                    <h6>Generate Notes</h6>
+                    <small>AI creates structured notes</small>
+                </div>
+            </div>
+
+            <div class="workflow-arrow">↓</div>
+
+            <div class="workflow-step">
+                <span class="step-number">3</span>
+
+                <div>
+                    <h6>Summary &amp; MCQs</h6>
+                    <small>Instant revision material</small>
+                </div>
+            </div>
+
+            <div class="workflow-arrow">↓</div>
+
+            <div class="workflow-step">
+                <span class="step-number">4</span>
+
+                <div>
+                    <h6>Study Smarter</h6>
+                    <small>Learn faster &amp; retain more</small>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div></section>
+
+</div></div></section>
+  <!-- HOW IT WORKS -->
+  <div class="text-center mb-5">
+
+    <span class="badge hero-badge mb-3">
+        How It Works
+    </span>
+
+    <h2 class="display-5 fw-bold">
+        From Topic To
+        <span class="hero-gradient">
+            Exam Ready
+        </span>
+        In Minutes
+    </h2>
+
+    <p class="text-secondary fs-5">
+        A simple AI-powered workflow designed to make studying faster and easier.
+    </p>
+
+</div>
+<section class="how-section py-5">
+
+    <div class="container">
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card">
+                    <div class="step-icon">📥</div>
+                    <span class="step-badge">Step 1</span>
+                    <h5>Enter Topic</h5>
+                    <p>Paste a topic, chapter, notes or study material.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card">
+                    <div class="step-icon">🤖</div>
+                    <span class="step-badge">Step 2</span>
+                    <h5>AI Processing</h5>
+                    <p>Teknixtic analyzes and structures the content.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card">
+                    <div class="step-icon">📝</div>
+                    <span class="step-badge">Step 3</span>
+                    <h5>Generate Content</h5>
+                    <p>Create notes, summaries and MCQs instantly.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card">
+                    <div class="step-icon">🎯</div>
+                    <span class="step-badge">Step 4</span>
+                    <h5>Learn Faster</h5>
+                    <p>Revise smarter and retain concepts efficiently.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="historyOffcanvas" aria-labelledby="historyOffcanvasLabel">
+      <div class="offcanvas-header border-bottom border-secondary-subtle">
+        <h5 class="offcanvas-title" id="historyOffcanvasLabel">Recent chats</h5>
+        <small class="text-white-50">Latest 5 saved chats</small>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-3">
+        {% if sessions %}
+          <div class="list-group list-group-flush">
+            {% for session in sessions %}
+              <a class="list-group-item list-group-item-action bg-transparent text-light border-secondary rounded-3 mb-2" href="/history/{{ session.id }}/">
+                <div class="d-flex justify-content-between align-items-start gap-2">
+                  <div>
+                    <div class="fw-semibold">{{ session.title }}</div>
+                    <small class="text-white-50">{{ session.created_at|date:"M d, Y" }}</small>
+                  </div>
+                  <span class="badge bg-primary-subtle text-primary-emphasis">Open</span>
+                </div>
+              </a>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p class="text-white-50 mb-0">No chat history yet. Ask the AI and it will appear here.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-10">
+          <div class="card border-0 shadow-lg rounded-4 overflow-hidden bg-dark text-light">
+            <div class="card-body p-4 p-md-5">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                <div class="text-center text-md-start">
+                  <h2 class="display-6 fw-bold mb-1">Teknixtic AI 🤖</h2>
+                  <p class="text-white-50 mb-0">Review your saved chats from the sidebar.</p>
+                </div>
+                <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#historyOffcanvas" aria-controls="historyOffcanvas">
+                  History
+                </button>
+              </div>
+              <div class="row g-4 align-items-stretch">
+                <div class="col-12">
+                  <div id="teknixtic-chatbot" class="h-100">
+                    <div class="ai-chat-window card border border-light border-opacity-10 shadow-lg rounded-4 bg-dark text-light h-100" id="chatWindow">
+                      <div class="ai-chat-header card-header border-0 bg-transparent">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div class="d-flex align-items-center gap-3">
+                            <div class="ai-avatar">
+                              <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2a3 3 0 0 1 3 3v1h1a4 4 0 0 1 4 4v4a4 4 0 0 1-4 4h-1v1a3 3 0 1 1-6 0v-1H8a4 4 0 0 1-4-4v-4a4 4 0 0 1 4-4h1V5a3 3 0 0 1 3-3z"></path>
+                              </svg>
+                            </div>
+                            <div>
+                              <h6 class="ai-title">Teknixtic AI</h6>
+                              <div class="ai-status"><span class="status-dot"></span>Online</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="ai-chat-body" id="chatBody">
+                        <div class="message ai">
+                          <div class="bubble">
+                            👋 Welcome to <strong>Teknixtic AI</strong>.<br>
+                            How can I help you today?
+                            <div class="quick-prompts">
+                              <button class="quick-prompt" data-preset="generate-notes">Generate Notes</button>
+                              <button class="quick-prompt" data-preset="summarize-topic">Summarize Topic</button>
+                              <button class="quick-prompt" data-preset="create-mcqs">Create MCQs</button>
+                              <button class="quick-prompt" data-preset="explain-concept">Explain Concept</button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="message ai  ai d-none" id="typingIndicator">
+                          <div class="bubble">
+                            <div class="typing">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="ai-chat-footer card-footer border-0 bg-transparent">
+                        <div class="ai-input-wrap d-flex align-items-center rounded-pill border border-light border-opacity-10 bg-light bg-opacity-10 p-2">
+                          <input type="text" class="form-control ai-input" id="chatInput" placeholder="Ask Teknixtic AI...">
+
+                          <button class="ai-send" id="sendBtn">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M2 21l20-9L2 3v7l14 2-14 2z"></path>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<footer class="saas-footer mt-5">
+
+  <div class="container py-5">
+
+    <div class="row g-4 align-items-start">
+
+      <!-- BRAND -->
+      <div class="col-lg-4">
+        <h4 class="footer-logo">⚡ TEKNIXTIC</h4>
+        <p class="footer-text">
+          AI-powered learning platform built for smarter, faster and simpler education.
+        </p>
+
+        <!-- SOCIAL LINKS -->
+        <div class="socials mt-3">
+
+          <a href="https://www.linkedin.com/in/YOUR-PROFILE"
+             target="_blank"
+             class="social-btn">
+            <span>in</span> LinkedIn
+          </a>
+
+        </div>
+      </div>
+
+      <!-- PRODUCT LINKS -->
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-title">Product</h6>
+        <ul class="footer-links">
+
+          <li><a href="{% url 'home' %}#features">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Updates</a></li>
+
+        </ul>
+      </div>
+
+      <!-- COMPANY LINKS -->
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-title">Company</h6>
+        <ul class="footer-links">
+
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+
+        </ul>
+      </div>
+
+      <!-- LEGAL -->
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-title">Legal</h6>
+        <ul class="footer-links">
+
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom mt-4 pt-3 d-flex justify-content-between flex-wrap">
+
+      <p class="mb-0 text-secondary">
+        © 2026 Teknixtic, Inc. All rights reserved.
+      </p>
+
+      <a href="https://www.linkedin.com/in/divyansh-pradhan-990382327/" target="_blank" rel="noopener">
+  My LinkedIn
+</a>
+
+    </div>
+
+  </div>
+</footer>
+
+  <script src="{% static 'js/index.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+
+</div></body>
+</html>
+
