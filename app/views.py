@@ -5,7 +5,11 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import Contact, Chathistory, ChatSession, ChatMessage
 
 import json 
-from openai import OpenAI  
+try:
+    from openai import OpenAI
+except ModuleNotFoundError:  # allow site to load even if dependency missing
+    OpenAI = None
+
 
 import os
 from dotenv import load_dotenv
@@ -91,9 +95,20 @@ def chatbot_api(request):
             user_message = (body.get("message") or "").strip()
 
             if not user_message:
+                # Help diagnose why client gets 400
+                try:
+                    raw_body = request.body.decode("utf-8", errors="replace")
+                except Exception:
+                    raw_body = "<unable to decode body>"
+
                 return JsonResponse({
-                    "response": "Please enter a question to continue."
+                    "response": "Bad request: missing/empty `message`.",
+                    "received": {
+                        "message": body.get("message"),
+                        "raw_body": raw_body,
+                    },
                 }, status=400)
+
 
             response = client.chat.completions.create(
                 model="llama-3.3-70b-versatile",
