@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: teknixtic
+    env: python
+    plan: free
+    buildCommand: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
+    startCommand: gunicorn project.wsgi:application
+    runtime: python3.11
