@@ -5,20 +5,18 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import Contact, Chathistory, ChatSession, ChatMessage
 
 import json 
-try:
-    from openai import OpenAI
-except ModuleNotFoundError:  # allow site to load even if dependency missing
-    OpenAI = None
 
 
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
-client = OpenAI(
-    api_key=os.getenv("GROQ_API_KEY"),
-    base_url="https://api.groq.com/openai/v1"
-)
+
+import os
+from groq import Groq
+
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
 # Existing Views
 def home(request):
     sessions = ChatSession.objects.order_by('-created_at')[:5]
