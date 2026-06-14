@@ -38,11 +38,7 @@ SECRET_KEY = 'django-insecure-m!c*s)#y(n4ao@-akm&a86ebsd!@q6n)$&!=mt@#g!&&to8fae
 DEBUG = True
 
 ALLOWED_HOSTS = [
-      "teknixtic-production-6424.up.railway.app"
-    "teknixtic.onrender.com",
-    "localhost",
-    "127.0.0.1",
-     ".railway.app"
+      "*"
 ]
 
 
